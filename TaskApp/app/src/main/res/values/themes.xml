@@ -1,0 +1,50 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TaskApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/dark_gray</item>
+        <item name="colorOnPrimary">@color/light_gray</item>
+        <item name="colorAccent">@color/bright_gray</item>
+    </style>
+
+    <style name="ThemeBlue" parent="Base.Theme.TaskApp">
+        <item name="colorPrimary">@color/dark_blue</item>
+        <item name="colorOnPrimary">@color/light_blue</item>
+        <item name="colorAccent">@color/bright_blue</item>
+    </style>
+    <style name="ThemeGreen" parent="Base.Theme.TaskApp">
+        <item name="colorPrimary">@color/dark_green</item>
+        <item name="colorOnPrimary">@color/light_green</item>
+        <item name="colorAccent">@color/bright_green</item>
+    </style>
+
+    <style name="ThemePink" parent="Base.Theme.TaskApp">
+        <item name="colorPrimary">@color/dark_pink</item>
+        <item name="colorOnPrimary">@color/light_pink</item>
+        <item name="colorAccent">@color/bright_pink</item>
+    </style>
+
+    <style name="ThemePurple" parent="Base.Theme.TaskApp">
+        <item name="colorPrimary">@color/dark_purple</item>
+        <item name="colorOnPrimary">@color/light_purple</item>
+        <item name="colorAccent">@color/bright_purple</item>
+    </style>
+
+    <style name="ThemeYellow" parent="Base.Theme.TaskApp">
+        <item name="colorPrimary">@color/dark_yellow</item>
+        <item name="colorOnPrimary">@color/light_yellow</item>
+        <item name="colorAccent">@color/bright_yellow</item>
+    </style>
+
+    <style name="ThemeRed" parent="Base.Theme.TaskApp">
+        <item name="colorPrimary">@color/dark_red</item>
+        <item name="colorOnPrimary">@color/light_red</item>
+        <item name="colorAccent">@color/bright_red</item>
+    </style>
+
+    <style name="ThemeOrange" parent="Base.Theme.TaskApp">
+        <item name="colorPrimary">@color/dark_orange</item>
+        <item name="colorOnPrimary">@color/light_orange</item>
+        <item name="colorAccent">@color/bright_orange</item>
+    </style>
+
+</resources>
