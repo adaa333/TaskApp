@@ -14,7 +14,9 @@
         android:gravity="center_vertical"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewSubjects"
@@ -26,5 +28,9 @@
             />
 
     </LinearLayout>
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

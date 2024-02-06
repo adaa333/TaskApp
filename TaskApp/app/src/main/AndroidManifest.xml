@@ -13,6 +13,9 @@
         android:theme="@style/Theme.TaskApp"
         tools:targetApi="34">
         <activity
+            android:name=".navigation.AddTaskActivity"
+            android:exported="false" />
+        <activity
             android:name=".navigation.MainActivity"
             android:exported="true">
             <intent-filter>

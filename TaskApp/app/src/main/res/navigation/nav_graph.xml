@@ -13,7 +13,11 @@
         <action
             android:id="@+id/action_subjectsFragment_to_addSubjectFragment"
             app:destination="@id/addSubjectFragment" />
+        <action
+            android:id="@+id/action_subjectsFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/addSubjectFragment"
         android:name="com.example.taskapp.navigation.fragments.subjectlist.SubjectsFragment"
@@ -22,5 +26,34 @@
         <action
             android:id="@+id/action_addSubjectFragment_to_subjectsFragment"
             app:destination="@id/subjectsFragment" />
+        <action
+            android:id="@+id/action_addSubjectFragment_to_calendarFragment"
+            app:destination="@id/calendarFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="com.example.taskapp.navigation.fragments.tasklist.TasksFragment"
+        android:label="TasksFragment" >
+        <action
+            android:id="@+id/action_tasksFragment_to_addTaskFragment"
+            app:destination="@id/addTaskFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addTaskFragment"
+        android:name="com.example.taskapp.navigation.fragments.tasklist.TasksFragment"
+        android:label="TasksFragment" />
+
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.taskapp.navigation.fragments.calendar.CalendarFragment"
+        android:label="CalendarFragment" >
+        <action
+            android:id="@+id/action_calendarFragment_to_subjectsFragment"
+            app:destination="@id/subjectsFragment" />
+        <action
+            android:id="@+id/action_calendarFragment_to_addSubjectFragment"
+            app:destination="@id/addSubjectFragment" />
     </fragment>
 </navigation>
