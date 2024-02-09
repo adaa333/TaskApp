@@ -4,6 +4,7 @@ import android.content.res.Resources.Theme
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import androidx.room.Relation
 import com.example.taskapp.data.entities.Task
 
 @Entity (tableName = "Subjects")
@@ -13,5 +14,9 @@ data class Subject(
     val id: Long,
     val name: String,
     val theme: String,
-    val list: List<Task>
+    @Relation(
+        parentColumn = "subject_id",
+        entityColumn = "task_id"
+    )
+    val taskList: List<Task>
 )

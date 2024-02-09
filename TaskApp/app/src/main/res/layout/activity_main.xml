@@ -25,7 +25,7 @@
                 android:id="@+id/textViewTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="My Subjects"
+                android:text="TaskApp"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"

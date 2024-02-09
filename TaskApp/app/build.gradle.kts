@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -45,8 +46,17 @@ dependencies {
     val room_version = "2.5.0"
     implementation("androidx.room:room-runtime:$room_version")
     annotationProcessor("androidx.room:room-compiler:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
     implementation("androidx.room:room-ktx:$room_version")
     androidTestImplementation("androidx.room:room-testing:$room_version")
+
+    //okhhtp
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
+    //Retrofit
+    val retrofit_version= "2.9.0"
+    implementation ("com.squareup.retrofit2:retrofit:$retrofit_version")
+    implementation ("com.google.code.gson:gson:2.10.1")
 
     // Navigation Component
     val nav_version = "2.5.3"
@@ -55,17 +65,17 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
     //lifecycle components
-    val lifecycle_version ="2.2.0"
-    implementation("androidx.lifecycle:lifecycle-extensions:$lifecycle_version")
-    implementation("androidx.lifecycle:lifecycle-common:$lifecycle_version")
+    val lifecycle_version ="2.5.1"
     implementation("androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version")
+    kapt("androidx.lifecycle:lifecycle-compiler:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+
 
     //kotlin components (Courutines)
     val courutines_version = "1.3.9"
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72")
-    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:$courutines_version")
+    //api("org.jetbrains.kotlinx:kotlinx-coroutines-core:$courutines_version")
     api("org.jetbrains.kotlinx:kotlinx-coroutines-android:$courutines_version")
-
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

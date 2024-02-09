@@ -36,12 +36,23 @@ class AddTaskFragment : BottomSheetDialogFragment() {
         }
 
         addTaskButton.setOnClickListener(){
-           // insertTaskToDatabase()
+           //insertTaskToDatabase()
         }
         return view
     }
 
     private fun insertTaskToDatabase(dueDate: Date, subjectId: Long) {
+        val title = binding.textViewTitle.text.toString()
+        val description =binding.textViewTitle.text.toString()
+
+        if( inputCheck(title,description) ){
+            val task= Task(0L,subjectId, title, description, dueDate)
+            taskViewModel.addTask(task)
+        }
+
+    }
+
+    private fun insertTaskToDatabase(subjectId: Long) {
         val title = binding.textViewTitle.text.toString()
         val description =binding.textViewTitle.text.toString()
 
