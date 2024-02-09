@@ -56,7 +56,7 @@ dependencies {
 
     //lifecycle components
     val lifecycle_version ="2.2.0"
-    implementation ("androidx.lifecycle:lifecycle-extensions:$")
+    implementation("androidx.lifecycle:lifecycle-extensions:$lifecycle_version")
     implementation("androidx.lifecycle:lifecycle-common:$lifecycle_version")
     implementation("androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version")
 

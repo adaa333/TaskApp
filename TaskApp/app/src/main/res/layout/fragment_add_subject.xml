@@ -20,90 +20,95 @@
         android:layout_marginEnd="16dp"/>
 
 
-    <LinearLayout
+    <RadioGroup
         android:id="@+id/asignarTema"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/textViewSubjectName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:orientation="horizontal"
         android:layout_marginTop="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp">
 
-        <Button
+        <RadioButton
             android:id="@+id/blueTheme"
-            android:backgroundTint="@color/dark_blue"
+            android:background="@color/dark_blue"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
-        <Button
+            android:layout_marginBottom="10dp" />
+
+        <RadioButton
             android:id="@+id/orangeTheme"
-            android:backgroundTint="@color/dark_orange"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
-        <Button
-            android:id="@+id/purpleTheme"
-            android:backgroundTint="@color/dark_purple"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
-        <Button
-            android:id="@+id/greenTheme"
-            android:backgroundTint="@color/dark_green"
+            android:background="@color/dark_orange"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:foregroundTint="#FFFFFF"/>
+            style="@style/RadioButtonNoCircle"/>
+        <RadioButton
+            android:id="@+id/purpleTheme"
+            android:background="@color/dark_purple"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            style="@style/RadioButtonNoCircle"/>
+        <RadioButton
+            android:id="@+id/greenTheme"
+            android:background="@color/dark_green"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            style="@style/RadioButtonNoCircle" />
 
-        <Button
+        <RadioButton
             android:id="@+id/pinkTheme"
-            android:backgroundTint="@color/dark_pink"
+            android:background="@color/dark_pink"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            style="@style/RadioButtonNoCircle"/>
 
-        <Button
+        <RadioButton
             android:id="@+id/yellowTheme"
-            android:backgroundTint="@color/dark_yellow"
+            android:background="@color/dark_yellow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            style="@style/RadioButtonNoCircle"/>
 
-        <Button
+        <RadioButton
             android:id="@+id/redTheme"
-            android:backgroundTint="@color/dark_red"
+            android:background="@color/dark_red"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="8dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
-    </LinearLayout>
-
+            android:layout_marginBottom="10dp"
+            style="@style/RadioButtonNoCircle"/>
+    </RadioGroup>
 
         <Button
-            android:id="@+id/guardarAsignatura"
+            android:id="@+id/saveSubject"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_centerVertical="true"
@@ -115,13 +120,13 @@
             android:textAlignment="center"
             app:layout_constraintTop_toBottomOf="@+id/asignarTema"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/eliminarAsignatura"/>
+            app:layout_constraintEnd_toStartOf="@+id/deleteSubject"/>
 
         <Button
-            android:id="@+id/eliminarAsignatura"
+            android:id="@+id/deleteSubject"
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:layout_toEndOf="@id/guardarAsignatura"
+            android:layout_toEndOf="@id/saveSubject"
             android:layout_centerVertical="true"
             android:layout_marginTop="80dp"
             android:layout_marginStart="10dp"
@@ -132,7 +137,5 @@
             app:layout_constraintTop_toBottomOf="@+id/asignarTema"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/guardarAsignatura"/>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

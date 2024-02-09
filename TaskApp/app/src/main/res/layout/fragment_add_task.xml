@@ -11,7 +11,6 @@
         android:layout_height="wrap_content"
         android:textSize="30sp"
         android:hint="Task name..."
-        android:textColorHint=""
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -25,8 +24,6 @@
         android:layout_height="300dp"
         android:textSize="20sp"
         android:hint="Type here your description..."
-        android:completionThreshold="1"
-        android:tokenizationChars=","
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSubjectName"
@@ -34,32 +31,31 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"/>
 
-    <LinearLayout
-        android:id="@+id/date_picker_layout"
+    <Button
+        android:id="@+id/datePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:drawableStart="@drawable/baseline_time"
+        android:text=" Due Date"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:backgroundTint="@color/cardview_dark_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewDescription"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp">
-        <ImageView
-            android:id="@+id/time_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_time" />
+        android:layout_marginEnd="16dp"/>
 
-        <Button
-            android:id="@+id/time_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" Due Date"
-            android:textSize="18sp"/>
-    </LinearLayout>
-
-
-
-
-
-
+    <Button
+        android:id="@+id/addTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="144dp"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:text="Add Task"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

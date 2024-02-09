@@ -11,8 +11,9 @@ data class Task (
     @PrimaryKey (autoGenerate = true)
     @ColumnInfo (name = "task_id")
     val id: Long,
-    val userId: Long,
+    val subjectId: Long,
     val titulo: String,
     val descripcion: String,
-    val fechaVencimiento: Date
+    val fechaLimite: Date
+
 )

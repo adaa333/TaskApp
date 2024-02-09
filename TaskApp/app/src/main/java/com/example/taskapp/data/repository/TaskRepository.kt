@@ -1,4 +1,4 @@
-package com.example.taskapp.repository
+package com.example.taskapp.data.repository
 
 import androidx.lifecycle.LiveData
 import com.example.taskapp.data.entities.Task

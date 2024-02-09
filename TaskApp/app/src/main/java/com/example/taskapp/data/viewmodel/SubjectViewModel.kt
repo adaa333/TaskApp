@@ -1,4 +1,4 @@
-package com.example.taskapp.viewmodel
+package com.example.taskapp.data.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.example.taskapp.data.database.TaskDataBase
 import com.example.taskapp.data.entities.Subject
-import com.example.taskapp.repository.SubjectRepository
+import com.example.taskapp.data.repository.SubjectRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
