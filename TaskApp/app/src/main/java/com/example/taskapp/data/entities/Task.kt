@@ -11,6 +11,7 @@ data class Task (
     @PrimaryKey (autoGenerate = true)
     @ColumnInfo (name = "task_id")
     val id: Long,
+    @ColumnInfo (name="subject_id")
     val subjectId: Long,
     val titulo: String,
     val descripcion: String,

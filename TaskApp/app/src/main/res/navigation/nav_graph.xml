@@ -38,12 +38,19 @@
         <action
             android:id="@+id/action_tasksFragment_to_addTaskFragment"
             app:destination="@id/addTaskFragment" />
+        <action
+            android:id="@+id/action_tasksFragment_to_subjectsFragment"
+            app:destination="@id/subjectsFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/addTaskFragment"
         android:name="com.example.taskapp.navigation.fragments.tasklist.TasksFragment"
-        android:label="TasksFragment" />
+        android:label="TasksFragment" >
+        <action
+            android:id="@+id/action_addTaskFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/calendarFragment"

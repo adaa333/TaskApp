@@ -4,12 +4,15 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.example.taskapp.data.entities.Subject
 import com.example.taskapp.data.dao.SubjectDao
 import com.example.taskapp.data.entities.Task
 import com.example.taskapp.data.dao.TaskDao
+import com.example.taskapp.util.Converters
 
 @Database(entities = [Subject::class],[Task::class], version=1, exportSchema = true )
+@TypeConverters (Converters::class)
 abstract class TaskDataBase : RoomDatabase(){
     abstract fun subjectDao(): SubjectDao
 

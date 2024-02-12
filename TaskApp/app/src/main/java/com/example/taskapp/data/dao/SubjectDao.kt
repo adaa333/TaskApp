@@ -25,7 +25,7 @@ interface SubjectDao  {
     @Query("SELECT * FROM Subjects ORDER BY subject_id ASC")
     fun findAllSubjects(): LiveData<List<Subject>>
 
-    @Transaction
-    @Query("SELECT * FROM Subjects")
-    fun getSubjectWithTasks(): List<SubjectWithTasks>
+    @Transaction //?
+    @Query("SELECT * FROM Subjects WHERE subject_id = :subjectId")
+    fun getSubjectWithTasks(subjectId: Long): LiveData<SubjectWithTasks>
 }

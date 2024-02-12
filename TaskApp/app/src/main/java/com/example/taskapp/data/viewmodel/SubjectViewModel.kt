@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 
 // proporciona datos a la IU y sobrevive a cambios de configuracion- centro de comunicacion entre el Repository y la IU
 class SubjectViewModel(application: Application) : AndroidViewModel(application){
-    private val readAllSubjects : LiveData<List<Subject>>
+    val readAllSubjects : LiveData<List<Subject>>
     private val repository: SubjectRepository
 
     init{ //?

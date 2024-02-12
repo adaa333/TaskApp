@@ -9,7 +9,7 @@ data class SubjectWithTasks (
     @Embedded val subject: Subject,
     @Relation(
         parentColumn = "subject_id",
-        entityColumn = "task_id"
+        entityColumn = "subject_id"
     )
-    val tasks: List<Task>
+    val tasks: List<Task> = emptyList()
 )

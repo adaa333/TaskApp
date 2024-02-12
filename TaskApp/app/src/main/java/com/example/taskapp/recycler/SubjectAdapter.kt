@@ -8,8 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.taskapp.R
 import com.example.taskapp.data.entities.Subject
 
-class SubjectAdapter(private val subjectList: List<Subject>) :
-    RecyclerView.Adapter<SubjectAdapter.SubjectViewHolder>() {
+class SubjectAdapter() : RecyclerView.Adapter<SubjectAdapter.SubjectViewHolder>() {
+
+    private var subjectList= emptyList<Subject>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SubjectViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -24,6 +25,11 @@ class SubjectAdapter(private val subjectList: List<Subject>) :
 
     override fun getItemCount(): Int {
         return subjectList.size
+    }
+
+    fun setData(subjects: List<Subject>){
+        this.subjectList=subjects
+        notifyDataSetChanged()
     }
 
     inner class SubjectViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
