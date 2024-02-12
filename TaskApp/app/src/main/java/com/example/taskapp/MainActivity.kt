@@ -3,12 +3,18 @@ package com.example.taskapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.liveData
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.taskapp.R
 import com.example.taskapp.databinding.ActivityMainBinding
+import com.example.taskapp.retrofit.RetrofitInstance
+import com.example.taskapp.retrofit.Service
+import com.example.taskapp.retrofit.XItems
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import retrofit2.Response
 
 class MainActivity : AppCompatActivity(), LifecycleOwner {
     lateinit var binding: ActivityMainBinding
@@ -42,6 +48,18 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
                 else -> false
             }
         }
+
+        //Retrofit
+        val retrofitService = RetrofitInstance.getRetrofitInstance().create(Service::class.java)
+
+        val responseLiveData : LiveData<Response<XItems>> =
+            liveData {
+                val response = retrofitService.getX()
+
+                //+ peticiones + responses
+
+                emit(response)
+            }
 
         //ViewModel
 
