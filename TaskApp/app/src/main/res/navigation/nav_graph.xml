@@ -29,6 +29,9 @@
         <action
             android:id="@+id/action_addSubjectFragment_to_calendarFragment"
             app:destination="@id/calendarFragment" />
+        <argument
+            android:name="subject_to_update"
+            app:argType="com.example.taskapp.data.entities.Subject" />
     </fragment>
 
     <fragment
@@ -50,6 +53,9 @@
         <action
             android:id="@+id/action_addTaskFragment_to_tasksFragment"
             app:destination="@id/tasksFragment" />
+        <argument
+            android:name="currentTask"
+            app:argType="com.example.taskapp.data.entities.Task" />
     </fragment>
 
     <fragment

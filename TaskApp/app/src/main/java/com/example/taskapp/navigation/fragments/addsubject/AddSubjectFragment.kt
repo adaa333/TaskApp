@@ -72,7 +72,7 @@ class AddSubjectFragment : BottomSheetDialogFragment() {
 
         if( inputCheck(name,theme) ){
             val subjectTasks: MutableList<Task> = mutableListOf()
-            val subject= Subject(0L, name, theme, subjectTasks)
+            val subject= Subject(0L, name, theme)
             subjectViewModel.addSubject(subject)
             Toast.makeText(requireContext(), "Subject Added!", Toast.LENGTH_LONG)
         }else{

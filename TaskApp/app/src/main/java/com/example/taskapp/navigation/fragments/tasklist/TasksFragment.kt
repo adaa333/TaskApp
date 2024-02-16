@@ -40,6 +40,7 @@ class TasksFragment : Fragment() {
             adapter.setData(task)
         })
 
+        //navigate to add task
         binding.floatingActionButton.setOnClickListener{
             val bottomSheetAddTask = BottomSheetDialogFragment()
             bottomSheetAddTask.show(requireActivity().supportFragmentManager, bottomSheetAddTask.tag)

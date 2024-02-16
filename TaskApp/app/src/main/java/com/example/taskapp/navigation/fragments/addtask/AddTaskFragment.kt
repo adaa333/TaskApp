@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.navArgs
 import com.example.taskapp.R
 import com.example.taskapp.data.entities.Task
 import com.example.taskapp.databinding.FragmentTasksBinding
@@ -18,6 +19,8 @@ import java.util.Date
 
 class AddTaskFragment : BottomSheetDialogFragment() {
 
+    //private val args: AddTaskFragmentArgs by navArgs<AddTaskFragmentArgs>()
+
     private lateinit var binding: TaskItemBinding
     private lateinit var taskViewModel: TaskViewModel
     private lateinit var dueDate: Date
@@ -27,6 +30,7 @@ class AddTaskFragment : BottomSheetDialogFragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_add_task, container, false)
+
         taskViewModel= ViewModelProvider(this)[TaskViewModel::class.java]
         val addTaskButton: Button = view.findViewById(R.id.addTask)
         val pickDateButton: Button = view.findViewById(R.id.datePicker)
@@ -45,8 +49,8 @@ class AddTaskFragment : BottomSheetDialogFragment() {
         val title = binding.textViewTitle.text.toString()
         val description =binding.textViewTitle.text.toString()
 
-        if( inputCheck(title,description) ){
-            val task= Task(0L,subjectId, title, description, dueDate)
+        if(inputCheck(title,description) ){
+            val task= Task(subjectId, title, description, dueDate)
             taskViewModel.addTask(task)
         }
 
@@ -57,7 +61,7 @@ class AddTaskFragment : BottomSheetDialogFragment() {
         val description =binding.textViewTitle.text.toString()
 
         if( inputCheck(title,description) ){
-            val task= Task(0L,subjectId, title, description, dueDate)
+            val task= Task(subjectId, title, description, dueDate)
             taskViewModel.addTask(task)
         }
 

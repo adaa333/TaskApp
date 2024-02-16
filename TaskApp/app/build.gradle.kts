@@ -2,6 +2,8 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
+    id("androidx.navigation.safeargs.kotlin")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -36,7 +38,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 }
 
@@ -59,7 +61,7 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-gson:$retrofit_version")
 
     // Navigation Component
-    val nav_version = "2.5.3"
+    val nav_version = "2.7.7"
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation ("com.google.android.material:material:1.11.0-alpha01")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")

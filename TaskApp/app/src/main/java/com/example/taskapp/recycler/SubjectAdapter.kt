@@ -7,9 +7,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.taskapp.R
 import com.example.taskapp.data.entities.Subject
+import com.example.taskapp.databinding.FragmentSubjectsBinding
 
 class SubjectAdapter() : RecyclerView.Adapter<SubjectAdapter.SubjectViewHolder>() {
-
+    lateinit var binding: FragmentSubjectsBinding
     private var subjectList= emptyList<Subject>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SubjectViewHolder {
@@ -21,6 +22,9 @@ class SubjectAdapter() : RecyclerView.Adapter<SubjectAdapter.SubjectViewHolder>(
     override fun onBindViewHolder(holder: SubjectViewHolder, position: Int) {
         val subject = subjectList[position]
         holder.bind(subject)
+
+        //aquí me quedé
+
     }
 
     override fun getItemCount(): Int {
